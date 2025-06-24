@@ -5,6 +5,7 @@ import { Fab, Tooltip, Box, Typography, Paper, IconButton } from "@mui/material"
 import { WhatsApp, Close } from "@mui/icons-material"
 import { motion, AnimatePresence } from "framer-motion"
 import { useTranslation } from "@/hooks/useTranslation"
+import { aboutPhone } from "@/utils/constant"
 
 const MotionPaper = motion(Paper)
 const MotionFab = motion(Fab)
@@ -13,11 +14,9 @@ export default function WhatsAppButton() {
   const { t } = useTranslation()
   const [showTooltip, setShowTooltip] = useState(false)
 
-  const phoneNumber = "+56934330275"
-
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent(t("whatsapp.message"))
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`
+    const whatsappUrl = `https://wa.me/${aboutPhone}?text=${message}`
     window.open(whatsappUrl, "_blank")
   }
 
@@ -124,7 +123,7 @@ export default function WhatsAppButton() {
         </AnimatePresence>
       </Box>
 
-      <Box
+      {/* <Box
         sx={{
           position: "fixed",
           bottom: { xs: 90, md: 110 },
@@ -152,7 +151,7 @@ export default function WhatsAppButton() {
             <WhatsApp sx={{ fontSize: 20 }} />
           </MotionFab>
         </Tooltip>
-      </Box>
+      </Box> */}
     </>
   )
 }

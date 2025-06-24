@@ -28,7 +28,7 @@ import { usePathname } from "next/navigation"
 import { useLanguage } from "../providers/LanguageProvider"
 import { useThemeMode } from "../providers/ThemeProvider"
 import { useTranslation } from "@/hooks/useTranslation"
-import { aboutName } from "@/utils/constant"
+import { aboutLogo, aboutName } from "@/utils/constant"
 
 
 const navigation = [
@@ -75,9 +75,33 @@ export default function Header() {
 
   const drawer = (
     <Box sx={{ width: 250 }}>
+      <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', p: 2 }}>
+          <Typography
+            variant="h6"
+            component={Link}
+            href="/"
+            sx={{
+              flexGrow: 1,
+              textDecoration: "none",
+              color: "inherit",
+            }}
+          >
+            {aboutName}
+          </Typography>
+
+        <IconButton onClick={handleDrawerToggle}>
+          <Typography variant="h6">✕</Typography>
+        </IconButton>
+      </Box>
       <List>
         {navigation.map((item) => (
-          <ListItem key={item.name} component={Link} href={item.href}>
+          <ListItem 
+            key={item.name} 
+            component={Link} 
+            href={item.href} 
+            onClick={handleDrawerToggle}
+            button
+          >
             <ListItemText
               primary={t(`navigation.${item.name}`)}
               sx={{
@@ -94,19 +118,10 @@ export default function Header() {
     <>
       <AppBar position="fixed" elevation={3}>
         <Toolbar>
-          <Typography
-            variant="h6"
-            component={Link}
-            href="/"
-            sx={{
-              flexGrow: 1,
-              textDecoration: "none",
-              color: "inherit",
-              fontWeight: "bold",
-            }}
-          >
-            {aboutName}
-          </Typography>
+
+          <Box component={Link} href="/" sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+            <img src={aboutLogo} alt={aboutName} style={{ height: 32 }} />
+          </Box>
 
           {!isMobile && (
             <Box sx={{ display: "flex", gap: 2, mr: 2 }}>

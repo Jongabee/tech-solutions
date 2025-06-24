@@ -2,7 +2,7 @@ export const aboutName = "asd"
 
 export const aboutEmail = "asd@gmail.com"
 
-export const aboutPhone = "+54 123 456 789"
+export const aboutPhone = "+56934330275"
 
 export const aboutInsta = "https://instagram.com/asd"
 
@@ -13,6 +13,8 @@ export const aboutGithub = "https://github.com/asd"
 export const aboutFacebook = "https://facebook.com/asd"
 
 export const aboutTwitter = "https://twitter.com/asd"
+
+export const aboutLogo = "/header-logo-1.webp"
 
 export const WHATSAPP_CONFIG = {
   phoneNumber: process.env.WHATSAPP_NUMBER || `${aboutPhone}`,
