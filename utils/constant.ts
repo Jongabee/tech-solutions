@@ -1,0 +1,25 @@
+export const aboutName = "asd"
+
+export const aboutEmail = "asd@gmail.com"
+
+export const aboutPhone = "+54 123 456 789"
+
+export const aboutInsta = "https://instagram.com/asd"
+
+export const aboutLinkedin = "https://linkedin.com/in/asd"
+
+export const aboutGithub = "https://github.com/asd"
+
+export const aboutFacebook = "https://facebook.com/asd"
+
+export const aboutTwitter = "https://twitter.com/asd"
+
+export const WHATSAPP_CONFIG = {
+  phoneNumber: process.env.WHATSAPP_NUMBER || `${aboutPhone}`,
+
+  defaultMessages: {
+    es: "¡Hola! Me interesa conocer más sobre sus servicios de desarrollo de plataformas digitales. ¿Podrían brindarme más información?",
+    en: "Hello! I'm interested in learning more about your digital platform development services. Could you provide me with more information?",
+    pt: "Olá! Estou interessado em saber mais sobre seus serviços de desenvolvimento de plataformas digitais. Poderiam me fornecer mais informações?",
+  },
+}
