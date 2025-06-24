@@ -13,8 +13,7 @@ export default function WhatsAppButton() {
   const { t } = useTranslation()
   const [showTooltip, setShowTooltip] = useState(false)
 
-  // Número de WhatsApp (cambiar por el número real)
-  const phoneNumber = "1234567890" // Formato: código de país + número sin espacios ni símbolos
+  const phoneNumber = "+56934330275"
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent(t("whatsapp.message"))
@@ -28,7 +27,6 @@ export default function WhatsAppButton() {
 
   return (
     <>
-      {/* Botón principal de WhatsApp */}
       <Box
         sx={{
           position: "fixed",
@@ -69,7 +67,6 @@ export default function WhatsAppButton() {
           <WhatsApp sx={{ fontSize: { xs: 28, md: 32 } }} />
         </MotionFab>
 
-        {/* Tooltip con mensaje personalizado */}
         <AnimatePresence>
           {showTooltip && (
             <MotionPaper
@@ -127,7 +124,6 @@ export default function WhatsAppButton() {
         </AnimatePresence>
       </Box>
 
-      {/* Botón alternativo para móviles (más pequeño y discreto) */}
       <Box
         sx={{
           position: "fixed",
