@@ -3,7 +3,6 @@
 import { Box, Container, Typography, Button, Grid } from "@mui/material"
 import { ArrowForward, PlayArrow } from "@mui/icons-material"
 import { motion } from "framer-motion"
-import Link from "next/link"
 import { useTranslation } from "@/hooks/useTranslation"
 
 const MotionBox = motion(Box)

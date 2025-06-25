@@ -57,7 +57,7 @@ export default function Footer() {
                 {t("services.items.mobileDevelopment.title")}
               </Link>
               <Link href="/servicios" color="text.secondary" underline="hover">
-                {t("services.items.cloudSolutions.title")}
+                {t("services.items.processAutomation.title")}
               </Link>
             </Box>
           </Grid>

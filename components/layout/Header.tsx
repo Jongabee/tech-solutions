@@ -36,7 +36,7 @@ const navigation = [
   { name: "services", href: "/servicios" },
   { name: "portfolio", href: "/portafolio" },
   { name: "about", href: "/sobre-nosotros" },
-  { name: "contact", href: "/contacto" },
+  { name: "contact", href: "/#contact" },
 ]
 
 const languages = [

@@ -7,17 +7,18 @@ import {
   Card,
   CardMedia,
   CardContent,
-  CardActions,
-  Button,
   Chip,
   Box,
 } from "@mui/material"
-import { Launch, GitHub } from "@mui/icons-material"
-import { portfolioData } from "@/data/portfolio"
+import { rawPortfolioData } from "@/data/portfolio"
 import { useTranslation } from "@/hooks/useTranslation"
 
 export default function PortfolioClient() {
   const { t } = useTranslation()
+  const portfolioData = rawPortfolioData.map(project => ({
+    ...project,
+    description: t(project.description),
+  }))
 
   return (
     <Container maxWidth="lg" sx={{ py: 8 }}>

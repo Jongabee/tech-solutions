@@ -4,7 +4,7 @@ const pt = {
     services: "Serviços",
     portfolio: "Portfólio",
     about: "Sobre Nós",
-    contact: "Contato",
+    contact: "Contate-nos",
   },
   hero: {
     title: "Transformamos Ideias em Soluções Digitais",
@@ -77,6 +77,15 @@ const pt = {
     subtitle: "Conheça alguns dos nossos projetos mais relevantes e histórias de sucesso",
     viewLive: "Ver Site",
     viewCode: "Ver Código",
+    ecommerceEjemplo: {
+        description: "Plataforma completa de comércio eletrônico com gerenciamento de estoque, pagamentos e análises em tempo real.",
+      },
+      managementSystemEjemplo: {
+        description: "Sistema de gestão empresarial para otimizar processos internos e melhorar a produtividade.",
+      },
+      financialDashboardEjemplo: {
+        description: "Painel financeiro interativo para monitorar receitas, despesas e projeções em tempo real.",
+      },
   },
   about: {
     title: "Sobre Nós",

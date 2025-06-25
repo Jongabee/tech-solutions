@@ -1,7 +1,8 @@
 import type { Metadata } from "next"
 import HeroSection from "@/components/sections/HeroSection"
-import { Container } from "@mui/material"
+import { Box, Container } from "@mui/material"
 import ServicesOverview from "@/components/sections/ServicesOverview"
+import ContactClient from "@/components/contacto"
 
 export const metadata: Metadata = {
   title: "Inicio - TechSolutions",
@@ -16,6 +17,10 @@ export default function HomePage() {
       <Container>
         <ServicesOverview />
       </Container>
+      <Box id="contact">
+        <ContactClient />
+      </Box>
+
     </>
   )
 }

@@ -1,0 +1,9 @@
+modificaciones:
+
+en general:
+1- ver datos personales de la empresa:
+	a) nombre 
+	b) email
+	c) whatsapp --> se envia a basti
+	d) redes sociales
+2- logo

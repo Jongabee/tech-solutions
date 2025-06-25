@@ -78,7 +78,6 @@ export default function ContactForm() {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
 
-    // Limpiar error del campo cuando el usuario empiece a escribir
     if (errors[name as keyof ContactFormErrors]) {
       setErrors((prev) => ({ ...prev, [name]: undefined }))
     }
@@ -163,6 +162,12 @@ export default function ContactForm() {
         >
           {loading ? t("contact.form.sending") : t("contact.form.send")}
         </Button>
+        {/* {success && (
+          <Alert severity="success" sx={{ mb: 3 }}>
+            ¡Gracias por contactarnos! Te hemos enviado un correo de confirmación. Nos comunicaremos contigo a la brevedad.
+          </Alert>
+        )} */}
+
       </Box>
     </Box>
   )

@@ -4,7 +4,7 @@ const en = {
     services: "Services",
     portfolio: "Portfolio",
     about: "About Us",
-    contact: "Contact",
+    contact: "Contact us",
   },
   hero: {
     title: "We Turn Ideas into Digital Solutions",
@@ -77,6 +77,15 @@ const en = {
     subtitle: "Discover some of our most outstanding projects and success stories",
     viewLive: "View Site",
     viewCode: "View Code",
+    ecommerceEjemplo: {
+      description: "Complete e-commerce platform with inventory management, payments, and real-time analytics.",
+    },
+    managementSystemEjemplo: {
+      description: "Business management system to optimize internal processes and improve productivity.",
+    },
+    financialDashboardEjemplo: {
+      description: "Interactive financial dashboard to monitor income, expenses, and projections in real time.",
+    },
   },
   about: {
     title: "About Us",
