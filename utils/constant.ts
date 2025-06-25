@@ -1,4 +1,4 @@
-export const aboutName = "asd"
+export const aboutName = "AndesByte Labs"
 
 export const aboutEmail = "asd@gmail.com"
 

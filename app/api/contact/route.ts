@@ -1,3 +1,4 @@
+import { aboutName } from '@/utils/constant'
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
@@ -43,7 +44,7 @@ export async function POST(req: NextRequest) {
           ${message}
 
           Saludos cordiales,
-          El equipo de [Nombre de tu empresa]
+          El equipo de ${aboutName}
               `.trim(),
             })
 
