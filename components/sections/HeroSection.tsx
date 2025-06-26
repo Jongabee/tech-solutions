@@ -92,7 +92,7 @@ export default function HeroSection() {
             </MotionBox>
           </Grid>
 
-          <Grid item xs={12} md={6}>
+          {/* <Grid item xs={12} md={6}>
             <MotionBox
               sx={{
                 display: "flex",
@@ -118,7 +118,7 @@ export default function HeroSection() {
                 }}
               />
             </MotionBox>
-          </Grid>
+          </Grid> */}
         </Grid>
       </Container>
 

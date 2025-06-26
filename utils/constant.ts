@@ -1,8 +1,14 @@
-export const aboutName = "AndesByte Labs"
+export const aboutName = "nexon"
 
 export const aboutEmail = "asd@gmail.com"
 
 export const aboutPhone = "+56934330275"
+
+export const aboutPhoneLink = `https://wa.me/${aboutPhone}?text=${encodeURIComponent(
+  '¡Hola! Me interesa conocer más sobre sus servicios de desarrollo de plataformas digitales. ¿Podrían brindarme más información?'
+)}`
+
+export const aboutWebSite = "www.nexon.com"
 
 export const aboutInsta = "https://instagram.com/asd"
 
@@ -14,7 +20,11 @@ export const aboutFacebook = "https://facebook.com/asd"
 
 export const aboutTwitter = "https://twitter.com/asd"
 
-export const aboutLogo = "/header-logo-1.webp"
+//logos del header para mantener el modo oscuro y claro
+export const aboutLogoLight = "/logoConNombreBlanco.png"
+export const aboutLogoDark = "/logoConNombreNegro.png"
+
+export const logoEmail = "https://res.cloudinary.com/dhemrtneb/image/upload/v1750973901/logoConNombre_wvpsxm.png"
 
 export const WHATSAPP_CONFIG = {
   phoneNumber: process.env.WHATSAPP_NUMBER || `${aboutPhone}`,

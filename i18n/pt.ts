@@ -139,6 +139,7 @@ const pt = {
     company: "Empresa",
     contact: "Contato",
     rights: "Todos os direitos reservados.",
+    location: "Estamos em"
   },
 };
 

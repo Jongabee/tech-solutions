@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import ServicesClient from "./ServicesClient"
+import ServicesClient from "../../components/servicios/ServicesClient"
 
 export const metadata: Metadata = {
   title: "Servicios - TechSolutions",

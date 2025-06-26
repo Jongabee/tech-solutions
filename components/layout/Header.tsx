@@ -28,13 +28,13 @@ import { usePathname } from "next/navigation"
 import { useLanguage } from "../providers/LanguageProvider"
 import { useThemeMode } from "../providers/ThemeProvider"
 import { useTranslation } from "@/hooks/useTranslation"
-import { aboutLogo, aboutName } from "@/utils/constant"
+import { aboutLogoLight, aboutLogoDark, aboutName } from "@/utils/constant"
 
 
 const navigation = [
   { name: "home", href: "/" },
   { name: "services", href: "/servicios" },
-  { name: "portfolio", href: "/portafolio" },
+  // { name: "portfolio", href: "/portafolio" },
   { name: "about", href: "/sobre-nosotros" },
   { name: "contact", href: "/#contact" },
 ]
@@ -55,6 +55,8 @@ export default function Header() {
   const { language, setLanguage } = useLanguage()
   const { mode, toggleMode } = useThemeMode()
   const { t } = useTranslation()
+  const textColor = theme.palette.text.primary
+  const logoSrc = mode === "light" ? aboutLogoDark : aboutLogoLight 
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen)
@@ -76,7 +78,7 @@ export default function Header() {
   const drawer = (
     <Box sx={{ width: 250 }}>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', p: 2 }}>
-          <Typography
+          {/* <Typography
             variant="h6"
             component={Link}
             href="/"
@@ -87,7 +89,10 @@ export default function Header() {
             }}
           >
             {aboutName}
-          </Typography>
+          </Typography> */}
+          <Box component={Link} href="/" sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+            <img src={logoSrc} alt={aboutName} style={{ height: 32 }} />
+          </Box>
 
         <IconButton onClick={handleDrawerToggle}>
           <Typography variant="h6">✕</Typography>
@@ -116,47 +121,63 @@ export default function Header() {
 
   return (
     <>
-      <AppBar position="fixed" elevation={3}>
-        <Toolbar>
-
-          <Box component={Link} href="/" sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
-            <img src={aboutLogo} alt={aboutName} style={{ height: 32 }} />
-          </Box>
-
-          {!isMobile && (
-            <Box sx={{ display: "flex", gap: 2, mr: 2 }}>
-              {navigation.map((item) => (
-                <Button
-                  key={item.name}
-                  component={Link}
-                  href={item.href}
-                  color="inherit"
-                  sx={{
-                  fontWeight: pathname === item.href ? "bold" : "normal",
-                  textDecoration: pathname === item.href ? "underline" : "none",
-                  textUnderlineOffset: "4px",
-                }}
-                >
-                  {t(`navigation.${item.name}`)}
-                </Button>
-              ))}
+      <AppBar
+      position="fixed" elevation={3} 
+      sx={{
+        backgroundColor: "transparent",
+        backdropFilter: "blur(10px)",
+        }}>
+        <Toolbar sx={{ minHeight: 56, display: 'flex', justifyContent: 'center' }}>
+          <Box
+            sx={{
+              width: "100%",
+              maxWidth: "1200px", 
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              px: 2,
+            }}
+          >
+            <Box component={Link} href="/" sx={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+              <img src={logoSrc} alt={aboutName} style={{ height: 32 }} />
             </Box>
-          )}
 
-          <IconButton color="inherit" onClick={toggleMode}>
-            {mode === "dark" ? <Brightness3Icon /> : <LightModeIcon />}
-          </IconButton>
+            {!isMobile && (
+              <Box sx={{ display: "flex", gap: 2, mr: 2 }}>
+                {navigation.map((item) => (
+                  <Button
+                    key={item.name}
+                    component={Link}
+                    href={item.href}
+                    sx={{
+                      color: textColor,
+                      fontWeight: pathname === item.href ? "bold" : "normal",
+                      textDecoration: pathname === item.href ? "underline" : "none",
+                      textUnderlineOffset: "4px",
+                    }}
+                  >
+                    {t(`navigation.${item.name}`)}
+                  </Button>
+                ))}
+              </Box>
+            )}
 
-          <IconButton color="inherit" onClick={handleLanguageClick}>
-            <TranslateIcon />
-          </IconButton>
-
-          {isMobile && (
-            <IconButton color="inherit" edge="start" onClick={handleDrawerToggle}>
-              <MenuIcon />
-            </IconButton>
-          )}
+            <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+              <IconButton sx={{ color: textColor }} onClick={toggleMode}>
+                {mode === "dark" ? <Brightness3Icon /> : <LightModeIcon />}
+              </IconButton>
+              <IconButton sx={{ color: textColor }} onClick={handleLanguageClick}>
+                <TranslateIcon />
+              </IconButton>
+              {isMobile && (
+                <IconButton sx={{ color: textColor }} edge="start" onClick={handleDrawerToggle}>
+                  <MenuIcon />
+                </IconButton>
+              )}
+            </Box>
+          </Box>
         </Toolbar>
+
       </AppBar>
 
       <Menu anchorEl={langAnchorEl} open={Boolean(langAnchorEl)} onClose={handleLanguageClose}>

@@ -2,7 +2,9 @@
 
 import { useTranslation } from "@/hooks/useTranslation"
 import { aboutEmail, aboutFacebook, aboutInsta, aboutLinkedin, aboutName, aboutPhone, aboutTwitter } from "@/utils/constant"
-import { Email, Facebook, Instagram, LinkedIn, LocationOn, Phone, Twitter } from "@mui/icons-material"
+import { Email, Facebook, Instagram, LinkedIn, Twitter } from "@mui/icons-material"
+import FmdGoodOutlinedIcon from '@mui/icons-material/FmdGoodOutlined';
+import CircleIcon from '@mui/icons-material/Circle';
 import { Box, Container, Grid, Typography, Link, IconButton, Divider } from "@mui/material"
 
 export default function Footer() {
@@ -81,20 +83,36 @@ export default function Footer() {
 
           <Grid item xs={12} sm={6} md={3}>
             <Typography variant="h6" gutterBottom>
-              {t("footer.contact")}
+              {t("footer.location")}
             </Typography>
-            <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
+            <Box sx={{ display: "flex", flexDirection: "column", gap: 1, }}>
               <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-                <Email sx={{ fontSize: 16 }} />
-                <Typography variant="body2" color="text.secondary">
-                  {aboutEmail}
-                </Typography>
+                <FmdGoodOutlinedIcon sx={{ fontSize: 16 }} />
+                <Box>
+                  <Typography variant="body2" color="text.secondary" sx={{fontWeight: "bold"}}>
+                    Argentina
+                  </Typography>
+                  <Box sx={{display: "flex", alignItems: "center", gap: 1}}>
+                    <CircleIcon sx={{ fontSize: 5 }} />
+                    <Typography variant="body2" color="text.secondary" sx={{fontSize: 11}}>
+                      Buenos Aires
+                    </Typography>
+                  </Box>
+                </Box>
               </Box>
               <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-                <Phone sx={{ fontSize: 16 }} />
-                <Typography variant="body2" color="text.secondary">
-                  {aboutPhone}
-                </Typography>
+                <FmdGoodOutlinedIcon sx={{ fontSize: 16 }} />
+                <Box>
+                  <Typography variant="body2" color="text.secondary" sx={{fontWeight: "bold"}}>
+                    Chile
+                  </Typography>
+                  <Box sx={{display: "flex", alignItems: "center", gap: 1}}>
+                    <CircleIcon sx={{ fontSize: 5 }} />
+                    <Typography variant="body2" color="text.secondary" sx={{fontSize: 11}}>
+                      Santiago
+                    </Typography>
+                  </Box>
+                </Box>
               </Box>
             </Box>
           </Grid>

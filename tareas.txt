@@ -7,3 +7,89 @@ en general:
 	c) whatsapp --> se envia a basti
 	d) redes sociales
 2- logo
+
+RESEND:
+Exactamente: hasta que no tengas un dominio propio configurado y verificado en Resend, solo vas a poder enviar correos a tu propio email registrado en Resend (jonatanmosqueda@gmail.com).
+Eso significa que:
+
+❌ Actualmente:
+Destinatario	¿Llega el mail?	Motivo
+Tu correo personal (jonatanmosqueda@gmail.com)	✅ Sí	Porque estás en modo sandbox/test
+Otro correo tuyo o el de la empresa	❌ No	Rechazado con error 403 (sin dominio verificado)
+Correo del usuario que envió el formulario	❌ No	También restringido en modo sandbox, solo podés mandarte a vos mismo
+
+✅ ¿Qué tenés que hacer para que funcione completo?
+Te explico paso a paso lo que tenés que hacer después de comprar el dominio:
+
+1. Comprar un dominio
+Lo podés hacer en proveedores como:
+
+Namecheap
+
+Hostinger
+
+GoDaddy
+
+Donweb (en español, opción latina)
+
+2. Agregar el dominio a Resend
+Ir a 👉 https://resend.com/domains
+
+Clic en “Add Domain”
+
+Ingresás el dominio que compraste (ej: nexonapp.com)
+
+3. Agregar registros DNS
+Resend te va a dar 3 o 4 registros DNS (SPF, DKIM y a veces DMARC).
+
+Vas al panel de control del proveedor donde compraste el dominio.
+
+Buscás la sección de "Zona DNS" o "Gestión DNS"
+
+Agregás cada registro exactamente como te indica Resend.
+
+⚠️ Esto es fundamental para que Resend pueda verificar que sos dueño del dominio y que tus correos no se vayan a spam.
+
+4. Esperar verificación
+Una vez que configurás los registros, puede demorar hasta 24 horas (aunque normalmente es menos).
+
+Resend te va a marcar el dominio como “Verified” cuando esté todo correcto.
+
+5. Cambiar el from en tu código
+Cuando el dominio esté verificado, podés usar:
+
+ts
+Copiar
+Editar
+from: 'contacto@nexonapp.com', // este remitente ahora sí es válido
+Y ya podrás enviar correos a:
+
+Vos (empresa)
+
+Cualquier usuario
+
+Direcciones personalizadas (ej: soporte@, ventas@, etc.)
+
+6. (Opcional pero recomendado) Agregar replyTo
+Esto permite que si el usuario responde el mail, te llegue directamente a vos:
+
+ts
+Copiar
+Editar
+replyTo: email // el email del usuario que llenó el formulario
+7. (Opcional pero útil) Usar un nombre para el remitente
+Podés mejorar la presentación del correo:
+
+ts
+Copiar
+Editar
+from: 'Nexon <contacto@nexonapp.com>'
+🧠 Resumen final
+Paso	Estado actual	¿Necesario para funcionar?
+Comprar dominio propio	❌ No hecho	✅ Sí
+Verificar dominio en Resend	❌ No hecho	✅ Sí
+Agregar registros SPF/DKIM/DMARC	❌ No hecho	✅ Sí
+Cambiar from a tu dominio	❌ No hecho	✅ Sí
+Habilitar replyTo	❌ Opcional	🚫 No (pero recomendable)
+
+¿Querés que te prepare una guía específica para el proveedor donde vas a comprar el dominio (por ejemplo, Donweb, Namecheap o GoDaddy)? ¿Ya tenés alguno elegido o comprado?

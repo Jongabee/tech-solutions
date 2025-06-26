@@ -1,4 +1,5 @@
-import { aboutName } from '@/utils/constant'
+import { confirmationEmailUser } from '@/utils/confirmationEmailUser'
+import { aboutEmail, aboutName, aboutWebSite } from '@/utils/constant'
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
@@ -33,19 +34,14 @@ export async function POST(req: NextRequest) {
     from: 'onboarding@resend.dev',
     to: email,
     subject: 'Hemos recibido tu mensaje',
-    text: `
-          Hola ${name},
-
-          Gracias por contactarte con nuestro equipo. Hemos recibido tu mensaje correctamente y te responderemos a la brevedad.
-
-          Este es un resumen de tu mensaje:
-          Asunto: ${subject || '(sin asunto)'}
-          Mensaje:
-          ${message}
-
-          Saludos cordiales,
-          El equipo de ${aboutName}
-              `.trim(),
+    html: confirmationEmailUser({
+    name,
+    subject,
+    message,
+    companyEmail: aboutEmail,
+    companyWebsite: aboutWebSite,
+    email,
+  }),
             })
 
             console.log('Respuesta de envío al cliente:', responseCliente)

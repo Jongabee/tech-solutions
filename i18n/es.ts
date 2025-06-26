@@ -139,6 +139,7 @@ const es = {
       company: "Empresa",
       contact: "Contacto",
       rights: "Todos los derechos reservados.",
+      location: "Estamos en"
     },
   }
 
