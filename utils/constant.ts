@@ -1,6 +1,6 @@
-export const aboutName = "nexon"
+export const aboutName = "ko-deka"
 
-export const aboutEmail = "asd@gmail.com"
+export const aboutEmail = "soporte@ko-deka.com"
 
 export const aboutPhone = "+56934330275"
 
@@ -8,7 +8,7 @@ export const aboutPhoneLink = `https://wa.me/${aboutPhone}?text=${encodeURICompo
   '¡Hola! Me interesa conocer más sobre sus servicios de desarrollo de plataformas digitales. ¿Podrían brindarme más información?'
 )}`
 
-export const aboutWebSite = "www.nexon.com"
+export const aboutWebSite = "www.ko-deka.com"
 
 export const aboutInsta = "https://instagram.com/asd"
 
