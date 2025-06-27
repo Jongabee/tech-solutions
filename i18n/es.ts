@@ -5,6 +5,7 @@ const es = {
       portfolio: "Portafolio",
       about: "Sobre Nosotros",
       contact: "Contáctanos",
+      FAQ: "Preguntas Frecuentes",
     },
     hero: {
       title: "Transformamos Ideas en Soluciones Digitales",
@@ -138,7 +139,7 @@ const es = {
       services: "Servicios",
       company: "Empresa",
       contact: "Contacto",
-      rights: "Todos los derechos reservados.",
+      rights: "Hecho por nosotros.",
       location: "Estamos en"
     },
   }

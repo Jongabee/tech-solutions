@@ -72,8 +72,8 @@ export default function Footer() {
               <Link href="/sobre-nosotros" color="text.secondary" underline="hover">
                 {t("navigation.about")}
               </Link>
-              <Link href="/portafolio" color="text.secondary" underline="hover">
-                {t("navigation.portfolio")}
+              <Link href="/faq" color="text.secondary" underline="hover">
+                {t("navigation.FAQ")}
               </Link>
               <Link href="/contacto" color="text.secondary" underline="hover">
                 {t("navigation.contact")}
@@ -122,7 +122,7 @@ export default function Footer() {
 
         <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
           <Typography variant="body2" color="text.secondary">
-            © {currentYear} {aboutName}. {t("footer.rights")}
+            © {currentYear} {aboutName}. {t("footer.rights")} 😊
           </Typography>
         </Box>
       </Container>

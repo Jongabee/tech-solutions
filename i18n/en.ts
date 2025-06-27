@@ -5,6 +5,7 @@ const en = {
     portfolio: "Portfolio",
     about: "About Us",
     contact: "Contact us",
+    FAQ: "Frequently Asked Questions",
   },
   hero: {
     title: "We Turn Ideas into Digital Solutions",
@@ -138,7 +139,7 @@ const en = {
     services: "Services",
     company: "Company",
     contact: "Contact",
-    rights: "All rights reserved.",
+    rights: "Made by us.",
     location: "We are in"
   },
 };
