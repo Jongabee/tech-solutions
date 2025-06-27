@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
   console.log('Respuesta de envío a empresa:', responseEmpresa)
 
   const responseCliente = await resend.emails.send({
-    from: `${aboutName} <${aboutEmail}>`,
+    from: `${name} <${email}>`,
     to: email,
     subject: 'Hemos recibido tu mensaje',
     html: confirmationEmailUser({
