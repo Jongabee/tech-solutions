@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
 
   try {
   const responseEmpresa = await resend.emails.send({
-    from: 'onboarding@resend.dev',
+    from: `${name}`,
     to: process.env.CONTACT_RECEIVER_EMAIL as string,
     subject: subject || `Nuevo mensaje de ${name}`,
     text: `
@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
   console.log('Respuesta de envío a empresa:', responseEmpresa)
 
   const responseCliente = await resend.emails.send({
-    from: 'onboarding@resend.dev',
+    from: `${aboutName}`,
     to: email,
     subject: 'Hemos recibido tu mensaje',
     html: confirmationEmailUser({
