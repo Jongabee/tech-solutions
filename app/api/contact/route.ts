@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
 
   try {
   const responseEmpresa = await resend.emails.send({
-    from: `${name} <${email}>`,
+    from: `${aboutName} <${aboutEmail}>`,
     to: process.env.CONTACT_RECEIVER_EMAIL as string,
     subject: subject || `Nuevo mensaje de ${name}`,
     text: `
