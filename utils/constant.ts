@@ -21,8 +21,8 @@ export const aboutFacebook = "https://facebook.com/asd"
 export const aboutTwitter = "https://twitter.com/asd"
 
 //logos del header para mantener el modo oscuro y claro
-export const aboutLogoLight = "/logoConNombreBlanco.png"
-export const aboutLogoDark = "/logoConNombreNegro.png"
+export const aboutLogoLight = "/logo_redondo.png"
+export const aboutLogoDark = "/logo_redondo.png"
 
 export const logoEmail = "https://res.cloudinary.com/dhemrtneb/image/upload/v1750973901/logoConNombre_wvpsxm.png"
 

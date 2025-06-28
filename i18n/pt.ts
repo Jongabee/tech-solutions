@@ -134,6 +134,26 @@ const pt = {
       },
     },
   },
+  faq: {
+    ask: {
+      typeWeb: "Que tipo de sites vocês desenvolvem?",
+      appIOSAndroid: "Vocês podem criar um aplicativo para iOS e Android?",
+      inSoftPer: "O que está incluído no software personalizado?",
+      dataView: "Como vocês visualizam meus dados?",
+      autoProcess: "Quais processos vocês podem automatizar?",
+      oldNewSistem: "Vocês podem migrar meus dados de um sistema antigo para um novo?",
+      cloudServices: "Vocês trabalham com serviços em nuvem?"
+    },
+    response: {
+      typeWebResponse: "Desenvolvemos sites modernos, responsivos, otimizados para SEO e adaptados aos seus objetivos comerciais.",
+      appIOSAndroidResponse: "Sim. Utilizamos tecnologias híbridas como React Native ou Flutter para criar apps que funcionam em ambos os sistemas operacionais com uma única base de código.",
+      inSoftPerResponse: "Analisamos seus processos, projetamos uma solução personalizada e a desenvolvemos com tecnologias modernas, garantindo uma adaptação perfeita às suas necessidades.",
+      dataViewResponse: "Criamos dashboards interativos usando ferramentas como Power BI, Tableau ou tecnologias web personalizadas, focando em insights acionáveis.",
+      autoProcessResponse: "Automatizamos tarefas repetitivas como geração de relatórios, envio de e-mails, integração entre plataformas ou fluxos internos usando scripts, bots ou RPA.",
+      oldNewSistemResponse: "Sim. Realizamos migrações seguras, planejadas e testadas entre bancos de dados, servidores, CRMs, ERPs ou qualquer outro sistema.",
+      cloudServicesResponse: "Sim. Migramos infraestruturas para a nuvem (AWS, Azure, GCP), otimizamos custos e garantimos escalabilidade e disponibilidade."
+    },
+  },
   footer: {
     description: "Transformamos ideias em soluções digitais inovadoras.",
     services: "Serviços",

@@ -38,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${inter.variable} ${roboto.variable}`}>
       <head>
-        <link rel="icon" href="/favicon.png" type="image/x-icon" />
+        <link rel="icon" href="/logo_redondo.png" type="image/x-icon" />
       </head>
       <body>
         <AppRouterCacheProvider>

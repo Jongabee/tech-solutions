@@ -91,7 +91,7 @@ export default function Header() {
             {aboutName}
           </Typography> */}
           <Box component={Link} href="/" sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
-            <img src={logoSrc} alt={aboutName} style={{ height: 32 }} />
+            <img src={logoSrc} alt={aboutName} style={{ height: 48 }} />
           </Box>
 
         <IconButton onClick={handleDrawerToggle}>

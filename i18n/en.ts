@@ -134,6 +134,26 @@ const en = {
       },
     },
   },
+  faq: {
+    ask: {
+      typeWeb: "What kind of websites do you develop?",
+      appIOSAndroid: "Can you create an app for both iOS and Android?",
+      inSoftPer: "What does custom software include?",
+      dataView: "How do you visualize my data?",
+      autoProcess: "What processes can you automate?",
+      oldNewSistem: "Can you migrate my data from an old system to a new one?",
+      cloudServices: "Do you work with cloud services?"
+    },
+    response: {
+      typeWebResponse: "We develop modern, responsive, SEO-optimized websites tailored to your business goals.",
+      appIOSAndroidResponse: "Yes. We use hybrid technologies like React Native or Flutter to develop apps that work on both operating systems with a single codebase.",
+      inSoftPerResponse: "We analyze your processes, design a custom solution, and develop it using modern technologies, ensuring a perfect fit for your needs.",
+      dataViewResponse: "We build interactive dashboards using tools like Power BI, Tableau, or custom web technologies, focusing on actionable insights.",
+      autoProcessResponse: "We automate repetitive tasks such as report generation, email sending, platform integration, or internal workflows using scripts, bots, or RPA.",
+      oldNewSistemResponse: "Yes. We carry out secure, planned, and tested migrations between databases, servers, CRMs, ERPs, or any other system.",
+      cloudServicesResponse: "Yes. We migrate infrastructures to the cloud (AWS, Azure, GCP), optimize costs, and ensure scalability and availability."
+    }
+  },    
   footer: {
     description: "We turn ideas into innovative digital solutions.",
     services: "Services",
