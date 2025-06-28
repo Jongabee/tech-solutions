@@ -1,6 +1,6 @@
 export const aboutName = "ko-deka"
 
-export const aboutEmail = "soporte@ko-deka.com"
+export const aboutEmail = "contacto@ko-deka.com"
 
 export const aboutPhone = "+56934330275"
 
