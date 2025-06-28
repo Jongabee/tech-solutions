@@ -3,9 +3,10 @@ import HeroSection from "@/components/sections/HeroSection"
 import { Box, Container } from "@mui/material"
 import ServicesOverview from "@/components/sections/ServicesOverview"
 import ContactClient from "@/components/contacto"
+import { aboutName } from "@/utils/constant"
 
 export const metadata: Metadata = {
-  title: "Inicio - TechSolutions",
+  title: `Inicio - ${aboutName}`,
   description:
     "Transformamos ideas en soluciones digitales innovadoras. Desarrollo de plataformas web, aplicaciones móviles y sistemas empresariales.",
 }

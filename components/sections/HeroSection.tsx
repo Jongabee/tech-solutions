@@ -50,7 +50,7 @@ export default function HeroSection() {
                   variant="contained"
                   size="large"
                   endIcon={<ArrowForward />}
-                  href="/contacto"
+                  href="/#contact"
                   sx={{
                     bgcolor: "white",
                     color: "primary.main",
@@ -67,7 +67,7 @@ export default function HeroSection() {
                   {t("hero.cta.primary")}
                 </MotionButton>
 
-                <MotionButton
+                {/* <MotionButton
                   variant="outlined"
                   size="large"
                   startIcon={<PlayArrow />}
@@ -87,7 +87,7 @@ export default function HeroSection() {
                   transition={{ duration: 0.8, delay: 0.8 }}
                 >
                   {t("hero.cta.secondary")}
-                </MotionButton>
+                </MotionButton> */}
               </Box>
             </MotionBox>
           </Grid>
