@@ -32,11 +32,11 @@ export function confirmationEmailUser({
       <p><strong>Mensaje:</strong><br/>${message.replace(/\n/g, '<br/>')}</p>
       <hr />
       <p style="font-size: 0.9em;">
-        Si lo preferís, también podés contactarnos directamente por WhatsApp haciendo clic
+        Si prefiere, también puede contactarnos directamente por WhatsApp haciendo clic
         <a href="${aboutPhoneLink}" style="color: #25D366; text-decoration: none;" target="_blank">aquí</a>
         </p>
         <p style="font-size: 0.9em;">
-        Además, podés seguir navegando por nuestra web en <a href="${aboutWebSite}">${aboutWebSite}</a>.
+        Además, puede seguir navegando por nuestra web en <a href="${aboutWebSite}">${aboutWebSite}</a>.
     </p>
 
       <p style="color: #888; font-size: 0.8em; text-align: center;">© ${new Date().getFullYear()} ${aboutName}. Todos los derechos reservados.</p>
