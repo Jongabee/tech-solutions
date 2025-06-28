@@ -32,7 +32,7 @@ export async function POST(req: NextRequest) {
 
   const responseCliente = await resend.emails.send({
     from: `${aboutName} <${aboutEmail}>`,
-    to: aboutEmail,
+    to: email,
     subject: 'Hemos recibido tu mensaje',
     html: confirmationEmailUser({
     name,
