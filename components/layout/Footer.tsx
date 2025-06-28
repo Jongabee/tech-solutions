@@ -75,7 +75,7 @@ export default function Footer() {
               <Link href="/faq" color="text.secondary" underline="hover">
                 {t("navigation.FAQ")}
               </Link>
-              <Link href="/contacto" color="text.secondary" underline="hover">
+              <Link href="/#contacto " color="text.secondary" underline="hover">
                 {t("navigation.contact")}
               </Link>
             </Box>
